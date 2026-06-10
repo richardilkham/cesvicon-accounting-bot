@@ -31,4 +31,4 @@ CESVICON ist ein KI-gestützter Telegram-Bot, der entwickelt wurde, um den manue
 ---
 
 **Möchten Sie manuelle Dateneingaben in Ihrem Unternehmen eliminieren?**  
-Lassen Sie uns über Ihre Architektur sprechen: [Mein LinkedIn Profil](www.linkedin.com/in/richard-spengler)
+Lassen Sie uns über Ihre Architektur sprechen: [Mein LinkedIn Profil](https://www.linkedin.com/in/richard-spengler)
