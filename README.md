@@ -1,34 +1,34 @@
-# CESVICON – Smart Accounting & OCR Bot 
+# CESVICON – Smart Accounting & OCR Bot
 
-CESVICON ist ein KI-gestützter Telegram-Bot, der entwickelt wurde, um den manuellen Aufwand in der Buchhaltung radikal zu minimieren. Die Software automatisiert die Erfassung, rechtliche Prüfung und revisionssichere Archivierung von B2B-Rechnungen und alltäglichen Kassenbons.
+CESVICON is an AI-powered Telegram bot designed to radically minimize manual accounting efforts. The software automates the extraction, legal compliance checking, and audit-proof archiving of B2B invoices and daily receipts.
 
-## Kernfunktionen (Key Features)
+## Key Features
 
-* **Intelligente Datenextraktion (OCR & LLM):** Liest A4-Rechnungen und Bons in Millisekunden aus. Bei komplexen, zerknitterten oder unklaren Layouts greift automatisch ein LLM-Fallback, um maximale Genauigkeit bei der Datenerfassung zu gewährleisten.
-* **§14 UStG Compliance-Check:** Das System prüft autonom, ob alle steuerrechtlich relevanten Pflichtangaben (z.B. Steuernummer, Anschrift, Umsatzsteuer) auf dem Beleg vorhanden sind, und meldet fehlende Daten sofort an den Nutzer zurück.
-* **Smart Archiving & Tag-Search:** Mehr als nur ein Scanner. Jedes hochgeladene Dokument wird mit einer **Unique ID**, Zeitstempeln und intelligenten Tags (Händler, Kategorie, Betrag) versehen und in der Datenbank hinterlegt. Durch eine schnelle Suchfunktion (via Keyword oder Datum) lässt sich das Originalbild oder die Datei jederzeit in Sekunden wieder aufrufen.
-* **Kategorisierung & Export:** Automatische Zuweisung von Spesenkategorien und strukturierte Aufbereitung für die nahtlose Integration in bestehende Unternehmens-Workflows.
+* **Intelligent Data Extraction (OCR & LLM):** Reads A4 invoices and receipts in milliseconds. For complex, crumpled, or unclear layouts, a dynamic LLM cascade automatically engages to ensure maximum data accuracy.
+* **§14 UStG Tax Compliance Check:** The system autonomously verifies whether all legally required tax information (e.g., tax ID, address, VAT) is present on the document and immediately reports missing data back to the user.
+* **Smart Archiving & Tag-Search:** More than just a scanner. Every uploaded document is assigned a **Unique ID**, timestamps, and intelligent tags (merchant, category, amount) and stored in the database. A fast search function (via keyword or date) retrieves the original image or file in seconds.
+* **Categorization & Export:** Automatic assignment of expense categories and structured formatting for seamless integration into existing corporate workflows.
 
-## Tech Stack & Architektur
+## Tech Stack & Architecture
 
 * **Backend & Logic:** Python 3, aiogram 3.x (Asynchronous Telegram Framework)
-* **Data Processing:** Tesseract OCR, LLM-APIs zur semantischen Analyse
-* **Intelligentes LLM-Routing (Timeout-gesteuerte Kaskade):** Einsatz einer dynamischen Fallback-Architektur zur Performance- und Kostenoptimierung. Das System überwacht die Antwortzeiten in Echtzeit: Überschreitet ein Modell das definierte Zeitlimit (Timeout), wird der Task nahtlos an die nächste Instanz übergeben.
-  * **Gemma 2 (27B):** Die primäre High-Speed-Engine. Liefert die schnellsten Verarbeitungszeiten für Standard-Layouts und klare Tabellen.
-  * **Llama 3.1 (8B):** Blitzschnelle und effiziente Alternative zur Textextraktion, die als direkter Fallback eingreift.
-  * **Llama 3.3 (70B):** Der Heavy-Duty-Fallback. Übernimmt als letzte Instanz bei stark beschädigten, unstrukturierten Dokumenten, die eine tiefgreifende semantische Analyse erfordern.
-* **Database & Storage:** PostgreSQL (für die sichere und relationale Speicherung von IDs, Tags und Metadaten)
-* **Architecture:** Fokus auf asynchrone Task-Verarbeitung und ressourcenschonendes Routing für eine reibungslose Performance (verarbeitet Standard-Dokumente in unter 2 Sekunden).
+* **Data Processing:** Tesseract OCR, LLM APIs for semantic analysis
+* **Intelligent LLM Routing (Timeout-Driven Cascade):** Deployment of a dynamic fallback architecture for performance and cost optimization. The system monitors response times in real-time: if a model exceeds the defined time limit (timeout), the task is seamlessly handed over to the next instance.
+  * **Gemma 2 (27B):** The primary high-speed engine. Delivers the fastest processing times for standard layouts and clear tables.
+  * **Llama 3.1 (8B):** Lightning-fast and efficient alternative for text extraction, acting as a direct fallback.
+  * **Llama 3.3 (70B):** The heavy-duty fallback. Takes over as the final instance for heavily damaged, unstructured documents requiring profound semantic analysis.
+* **Database & Storage:** PostgreSQL (for secure, relational storage of IDs, tags, and metadata)
+* **Architecture:** Focus on asynchronous task processing and resource-efficient routing for smooth performance (processes standard documents in under 2 seconds).
 
 ## System Showcase
 
-*(Platzhalter: Hier werden in Kürze die UI-Screenshots des Systems hinzugefügt)*
-> 1. KI-gestützte Belegverarbeitung & Datenextraktion
-> 2. §14 UStG-Prüfung & Erkennung fehlender Pflichtangaben
-> 3. Schnelle Kassenbon-Erfassung & Kategorisierung
-> 4. Dokumentensuche via Unique ID & Tags
+*(Placeholder: UI screenshots of the system will be added here shortly)*
+> 1. AI-Powered Receipt Processing & Data Extraction
+> 2. §14 UStG Tax Compliance Check & Missing Data Detection
+> 3. High-Speed Receipt Capture & Categorization
+> 4. Document Search via Unique ID & Tags
 
 ---
 
-**Möchten Sie manuelle Dateneingaben in Ihrem Unternehmen eliminieren?**  
-Lassen Sie uns über Ihre Architektur sprechen: [Mein LinkedIn Profil](https://www.linkedin.com/in/richard-spengler)
+**Want to eliminate manual data entry in your company?**  
+Let's discuss your system architecture: [Mein LinkedIn Profil](https://www.linkedin.com/in/richard-spengler)
