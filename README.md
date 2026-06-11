@@ -31,4 +31,4 @@ CESVICON is an AI-powered Telegram bot designed to radically minimize manual acc
 ---
 
 **Want to eliminate manual data entry in your company?**  
-Let's discuss your system architecture: [Mein LinkedIn Profil](https://www.linkedin.com/in/richard-spengler)
+Let's discuss your system architecture: [My LinkedIn Profile](https://www.linkedin.com/in/richard-spengler)
